@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:abstractionDefinition xmlns:kactus2="http://funbase.cs.tut.fi/" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5/index.xsd">
+	<spirit:vendor>org.opencores</spirit:vendor>
+	<spirit:library>openrisc</spirit:library>
+	<spirit:name>or1k_irq.absDef</spirit:name>
+	<spirit:version>1.0</spirit:version>
+	<spirit:busType spirit:vendor="org.opencores" spirit:library="openrisc" spirit:name="or1k_irq" spirit:version="1.0"/>
+	<spirit:ports>
+		<spirit:port>
+			<spirit:logicalName>irq2</spirit:logicalName>
+			<spirit:wire>
+				<spirit:onMaster>
+					<spirit:presence>required</spirit:presence>
+					<spirit:width>1</spirit:width>
+					<spirit:direction>in</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>irq1</spirit:logicalName>
+			<spirit:wire>
+				<spirit:onMaster>
+					<spirit:presence>required</spirit:presence>
+					<spirit:width>1</spirit:width>
+					<spirit:direction>in</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>irq0</spirit:logicalName>
+			<spirit:wire>
+				<spirit:onMaster>
+					<spirit:presence>required</spirit:presence>
+					<spirit:width>1</spirit:width>
+					<spirit:direction>in</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+	</spirit:ports>
+	<spirit:vendorExtensions>
+		<kactus2:version></kactus2:version>
+	</spirit:vendorExtensions>
+</spirit:abstractionDefinition>

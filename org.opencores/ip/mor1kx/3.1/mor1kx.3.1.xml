@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:kactus2="http://funbase.cs.tut.fi/" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5/index.xsd">
+	<spirit:vendor>org.opencores</spirit:vendor>
+	<spirit:library>ip</spirit:library>
+	<spirit:name>mor1kx</spirit:name>
+	<spirit:version>3.1</spirit:version>
+	<spirit:busInterfaces>
+		<spirit:busInterface>
+			<spirit:name>wb_d</spirit:name>
+			<spirit:busType spirit:vendor="org.opencores" spirit:library="wishbone" spirit:name="wishbone" spirit:version="b3"/>
+			<spirit:abstractionType spirit:vendor="org.opencores" spirit:library="wishbone" spirit:name="wishbone.absDef" spirit:version="b3"/>
+			<spirit:master/>
+			<spirit:connectionRequired>false</spirit:connectionRequired>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>adr_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>dwbm_adr_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>dat_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>dwbm_dat_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>sel_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>3</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>dwbm_sel_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>3</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>we_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>dwbm_we_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>cyc_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>dwbm_cyc_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>stb_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>dwbm_stb_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>cti_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>2</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>dwbm_cti_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>2</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>bte_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>1</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>dwbm_bte_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>1</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>dat_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>dwbm_dat_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ack_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>dwbm_ack_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>err_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>dwbm_err_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>rty_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>dwbm_rty_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+			<spirit:bitsInLau>8</spirit:bitsInLau>
+			<spirit:endianness>little</spirit:endianness>
+		</spirit:busInterface>
+		<spirit:busInterface>
+			<spirit:name>wb_i</spirit:name>
+			<spirit:busType spirit:vendor="org.opencores" spirit:library="wishbone" spirit:name="wishbone" spirit:version="b3"/>
+			<spirit:abstractionType spirit:vendor="org.opencores" spirit:library="wishbone" spirit:name="wishbone.absDef" spirit:version="b3"/>
+			<spirit:master/>
+			<spirit:connectionRequired>false</spirit:connectionRequired>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>adr_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>iwbm_adr_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>dat_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>iwbm_dat_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>sel_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>3</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>iwbm_sel_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>3</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>we_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>iwbm_we_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>cyc_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>iwbm_cyc_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>stb_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>iwbm_stb_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>cti_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>2</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>iwbm_cti_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>2</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>bte_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>1</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>iwbm_bte_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>1</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>dat_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>iwbm_dat_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ack_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>iwbm_ack_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>err_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>iwbm_err_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>rty_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>iwbm_rty_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+			<spirit:bitsInLau>8</spirit:bitsInLau>
+			<spirit:endianness>little</spirit:endianness>
+		</spirit:busInterface>
+		<spirit:busInterface>
+			<spirit:name>dbg</spirit:name>
+			<spirit:busType spirit:vendor="org.opencores" spirit:library="openrisc" spirit:name="or1k_debug" spirit:version="1.0"/>
+			<spirit:abstractionType spirit:vendor="org.opencores" spirit:library="openrisc" spirit:name="or1k_debug.absDef" spirit:version="1.0"/>
+			<spirit:mirroredMaster/>
+			<spirit:connectionRequired>false</spirit:connectionRequired>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>addr_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>15</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>du_addr_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>15</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>stb_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>du_stb_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>dat_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>du_dat_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>we_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>du_we_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>dat_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>du_dat_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>31</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ack_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>du_ack_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>stall_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>du_stall_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>stall_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>du_stall_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+			<spirit:bitsInLau>8</spirit:bitsInLau>
+			<spirit:endianness>little</spirit:endianness>
+		</spirit:busInterface>
+	</spirit:busInterfaces>
+	<spirit:model>
+		<spirit:views>
+			<spirit:view>
+				<spirit:name>rtl</spirit:name>
+				<spirit:envIdentifier>verilog:Kactus2:</spirit:envIdentifier>
+				<spirit:language spirit:strict="false">verilog</spirit:language>
+				<spirit:modelName>mor1kx</spirit:modelName>
+				<spirit:vendorExtensions>
+					<kactus2:componentInstantiation>
+						<spirit:name>rtl</spirit:name>
+					</kactus2:componentInstantiation>
+				</spirit:vendorExtensions>
+			</spirit:view>
+		</spirit:views>
+		<spirit:ports>
+			<spirit:port>
+				<spirit:name>clk</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+				<spirit:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</spirit:vendorExtensions>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>rst</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+				<spirit:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</spirit:vendorExtensions>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>iwbm_adr_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>31</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>iwbm_stb_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>iwbm_cyc_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>iwbm_sel_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>3</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>iwbm_we_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>iwbm_cti_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>2</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>iwbm_bte_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>1</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>iwbm_dat_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>31</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>iwbm_err_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>iwbm_ack_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>iwbm_dat_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>31</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>iwbm_rty_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>dwbm_adr_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>31</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>dwbm_stb_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>dwbm_cyc_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>dwbm_sel_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>3</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>dwbm_we_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>dwbm_cti_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>2</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>dwbm_bte_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>1</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>dwbm_dat_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>31</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>dwbm_err_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>dwbm_ack_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>dwbm_dat_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>31</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>dwbm_rty_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>irq_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>31</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+				<spirit:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</spirit:vendorExtensions>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>du_addr_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>15</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>du_stb_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>du_dat_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>31</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>du_we_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>du_dat_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>31</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>du_ack_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>du_stall_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>du_stall_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>traceport_exec_valid_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>traceport_exec_pc_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>31</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>traceport_exec_wbdata_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>31</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>traceport_exec_wbreg_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>4</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>traceport_exec_wben_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>multicore_coreid_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>31</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>multicore_numcores_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>31</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>snoop_adr_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>31</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>snoop_en_i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>0</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+			</spirit:port>
+		</spirit:ports>
+		<spirit:modelParameters>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_OPERAND_WIDTH</spirit:name>
+				<spirit:value spirit:id="{f38b338a-bf96-4806-90a1-abb9ebb91b5d}">32</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_CPU0</spirit:name>
+				<spirit:value spirit:id="{86a0c950-f847-4e7d-9190-14b5cf8fc0a7}">CAPPUCCINO</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_DATACACHE</spirit:name>
+				<spirit:value spirit:id="{bf490de1-a22c-4d4c-b30a-23015ad933e7}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_DCACHE_BLOCK_WIDTH</spirit:name>
+				<spirit:value spirit:id="{09a62c92-4768-4ce4-81b6-fe5f1a24a1fc}">5</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_DCACHE_SET_WIDTH</spirit:name>
+				<spirit:value spirit:id="{0509e429-d68a-4f98-8119-a3371cfa63ec}">9</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_DCACHE_WAYS</spirit:name>
+				<spirit:value spirit:id="{3cdd1129-35d4-468f-8227-ccb18c31cbeb}">2</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_DCACHE_LIMIT_WIDTH</spirit:name>
+				<spirit:value spirit:id="{a077d384-8c08-431c-a094-df1533818c5e}">32</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_DCACHE_SNOOP</spirit:name>
+				<spirit:value spirit:id="{a6f47125-16a3-4a39-bb9f-fc95069c0780}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_DMMU</spirit:name>
+				<spirit:value spirit:id="{9014aca5-cb15-4288-a06a-a211e051c915}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_DMMU_HW_TLB_RELOAD</spirit:name>
+				<spirit:value spirit:id="{1578619a-f23e-4a1a-8872-ee696a3891c3}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_DMMU_SET_WIDTH</spirit:name>
+				<spirit:value spirit:id="{42f9d9d9-b1ac-4e17-982b-0c2155546614}">6</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_DMMU_WAYS</spirit:name>
+				<spirit:value spirit:id="{106793f9-a630-4afa-9650-4dbadc878413}">1</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_INSTRUCTIONCACHE</spirit:name>
+				<spirit:value spirit:id="{28339b99-8981-40b5-90b6-6b64ec51332e}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_ICACHE_BLOCK_WIDTH</spirit:name>
+				<spirit:value spirit:id="{07c67393-0a3e-4cd2-afce-0b6ab0ed9a64}">5</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_ICACHE_SET_WIDTH</spirit:name>
+				<spirit:value spirit:id="{849b0dc7-0fed-4f81-af65-d4c8c31dbedd}">9</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_ICACHE_WAYS</spirit:name>
+				<spirit:value spirit:id="{2b496bf6-0dc5-4ca5-bd5c-d4f4b7761b07}">2</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_ICACHE_LIMIT_WIDTH</spirit:name>
+				<spirit:value spirit:id="{f61b8000-ac69-4b1f-8456-8e2edd0eeaa0}">32</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_IMMU</spirit:name>
+				<spirit:value spirit:id="{fb0d1860-91cd-4885-976b-e9809acbc980}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_IMMU_HW_TLB_RELOAD</spirit:name>
+				<spirit:value spirit:id="{370956a1-81c0-4abf-bad9-3ef26e16ebc4}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_IMMU_SET_WIDTH</spirit:name>
+				<spirit:value spirit:id="{f74804b0-9445-4e93-affe-b996f4b04078}">6</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_IMMU_WAYS</spirit:name>
+				<spirit:value spirit:id="{5b66b573-5c4e-4e96-9134-832a04ec74cb}">1</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_TIMER</spirit:name>
+				<spirit:value spirit:id="{fa469ace-fb5f-470d-83dd-c61789ceb783}">ENABLED</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_DEBUGUNIT</spirit:name>
+				<spirit:value spirit:id="{c3fe90e4-bf55-4158-97f4-f6bb0d2ab3fa}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_PERFCOUNTERS</spirit:name>
+				<spirit:value spirit:id="{82422770-e807-4a42-b7d1-04b9e346e08c}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_MAC</spirit:name>
+				<spirit:value spirit:id="{9cef2a83-1a57-4e7f-8374-306e80cbaab8}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_SYSCALL</spirit:name>
+				<spirit:value spirit:id="{9f2eaecb-0959-4595-89a0-967b58b4b334}">ENABLED</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_TRAP</spirit:name>
+				<spirit:value spirit:id="{59160311-6180-4aa8-8c34-075b1a7ad4d7}">ENABLED</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_RANGE</spirit:name>
+				<spirit:value spirit:id="{bc6b0e4b-8903-45d8-961b-4a21b38ae2e8}">ENABLED</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_PIC</spirit:name>
+				<spirit:value spirit:id="{a18f0751-6906-49f9-8bab-ca3ba3445df9}">ENABLED</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_PIC_TRIGGER</spirit:name>
+				<spirit:value spirit:id="{36ba59d1-e480-4a89-abfc-1c9a77e8e611}">LEVEL</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_PIC_NMI_WIDTH</spirit:name>
+				<spirit:value spirit:id="{a11a4bf6-2063-4128-a4d4-0e0f1916c677}">0</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_DSX</spirit:name>
+				<spirit:value spirit:id="{6e3edd7b-3ff7-4d38-9603-c18314be3b1f}">ENABLED</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_OVERFLOW</spirit:name>
+				<spirit:value spirit:id="{dc2530bd-717e-4927-b830-b1e76471b730}">ENABLED</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_CARRY_FLAG</spirit:name>
+				<spirit:value spirit:id="{c0a8e645-b84e-486b-99e4-e4a501a780a1}">ENABLED</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_FASTCONTEXTS</spirit:name>
+				<spirit:value spirit:id="{dc41e28c-4b49-4665-acd6-bfd930cd82e3}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_RF_NUM_SHADOW_GPR</spirit:name>
+				<spirit:value spirit:id="{bf95ecbb-e258-40d6-bde6-bb953ae58c50}">0</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_RF_ADDR_WIDTH</spirit:name>
+				<spirit:value spirit:id="{293c9fa0-c7b2-4a94-9b60-05febf63e829}">5</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_RF_WORDS</spirit:name>
+				<spirit:value spirit:id="{8a1045bd-281c-403e-bc8f-8aeeea0cab49}">32</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_RESET_PC</spirit:name>
+				<spirit:value spirit:id="{5105f9eb-4299-405d-8633-3948da037e7d}">32'h00000100</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_MULTIPLIER</spirit:name>
+				<spirit:value spirit:id="{19cead73-d1d4-4020-bafb-77396f8ad2d9}">THREESTAGE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_DIVIDER</spirit:name>
+				<spirit:value spirit:id="{8798856f-e025-4a33-bfd9-3b1cf5ca605e}">SERIAL</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_ADDC</spirit:name>
+				<spirit:value spirit:id="{a6156910-270c-42cd-ac45-d64696d7f2ee}">ENABLED</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_SRA</spirit:name>
+				<spirit:value spirit:id="{b8f36e5d-37f4-4251-9af9-1568e62143be}">ENABLED</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_ROR</spirit:name>
+				<spirit:value spirit:id="{f9cd26cc-4c6d-41af-b980-6b47719ad476}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_EXT</spirit:name>
+				<spirit:value spirit:id="{4db4f4bb-bcba-4f1f-a3d1-156b718acb11}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_CMOV</spirit:name>
+				<spirit:value spirit:id="{ba10d134-e6fc-4ad4-aaf6-99c2b33f7c7e}">ENABLED</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_FFL1</spirit:name>
+				<spirit:value spirit:id="{15aae0ee-3584-496f-985e-3ee77c2c00ee}">ENABLED</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_ATOMIC</spirit:name>
+				<spirit:value spirit:id="{f6bb88f0-ddfc-4e7e-9b61-5cde3eb866f3}">ENABLED</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_CUST1</spirit:name>
+				<spirit:value spirit:id="{78c40501-66f5-4ab5-8997-d7f002f360fa}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_CUST2</spirit:name>
+				<spirit:value spirit:id="{f9c8d2d7-14e6-4dff-ac80-284214627b97}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_CUST3</spirit:name>
+				<spirit:value spirit:id="{3a338eec-0d60-4317-804b-86a14da62860}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_CUST4</spirit:name>
+				<spirit:value spirit:id="{9b39f2d8-1915-4753-9fd3-0e3b7392d488}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_CUST5</spirit:name>
+				<spirit:value spirit:id="{1e7ce369-dec7-4bc2-85c4-3774ee528996}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_CUST6</spirit:name>
+				<spirit:value spirit:id="{967ca111-39dd-4b39-9287-678cc0d40bb6}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_CUST7</spirit:name>
+				<spirit:value spirit:id="{2ec78f34-70d3-40ba-bc05-299aa464b36c}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_CUST8</spirit:name>
+				<spirit:value spirit:id="{88e509fd-4096-4b83-a74c-6a8f975db736}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_SHIFTER</spirit:name>
+				<spirit:value spirit:id="{c37c5b17-a388-460d-aba8-bcbeaa2e281f}">BARREL</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_STORE_BUFFER</spirit:name>
+				<spirit:value spirit:id="{8db76a6b-6a78-40cd-b860-ace05efa8bcc}">ENABLED</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>OPTION_STORE_BUFFER_DEPTH_WIDTH</spirit:name>
+				<spirit:value spirit:id="{1527a8c7-a8aa-43c6-89bb-33780bccdab5}">8</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_MULTICORE</spirit:name>
+				<spirit:value spirit:id="{bb3819c8-498b-4f03-8055-bcccd385b98d}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>FEATURE_TRACEPORT_EXEC</spirit:name>
+				<spirit:value spirit:id="{f9b97e64-45f0-402d-897c-ac294c5537c4}">NONE</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>BUS_IF_TYPE</spirit:name>
+				<spirit:value spirit:id="{afddc3cd-ab5b-4258-8bc4-6934dd35cd40}">WISHBONE32</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>IBUS_WB_TYPE</spirit:name>
+				<spirit:value spirit:id="{83ea8f23-af74-4d1f-ab43-a0f7c2db95b3}">B3_READ_BURSTING</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>DBUS_WB_TYPE</spirit:name>
+				<spirit:value spirit:id="{df3f4646-27d4-4cf6-b767-dc731f8cd5d8}">CLASSIC</spirit:value>
+			</spirit:modelParameter>
+		</spirit:modelParameters>
+	</spirit:model>
+	<spirit:vendorExtensions>
+		<kactus2:extensions>
+			<kactus2:kts_attributes>
+				<kactus2:kts_productHier>IP</kactus2:kts_productHier>
+				<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+				<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+			</kactus2:kts_attributes>
+			<kactus2:sourceDirectories>
+				<kactus2:sourceDirectory>../../../../../../.cache/fusesoc/mor1kx/rtl/verilog</kactus2:sourceDirectory>
+			</kactus2:sourceDirectories>
+			<kactus2:author>olof</kactus2:author>
+		</kactus2:extensions>
+	</spirit:vendorExtensions>
+</spirit:component>

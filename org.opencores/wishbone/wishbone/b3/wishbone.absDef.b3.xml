@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:abstractionDefinition xmlns:kactus2="http://funbase.cs.tut.fi/" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5/index.xsd">
+	<spirit:vendor>org.opencores</spirit:vendor>
+	<spirit:library>wishbone</spirit:library>
+	<spirit:name>wishbone.absDef</spirit:name>
+	<spirit:version>b3</spirit:version>
+	<spirit:busType spirit:vendor="org.opencores" spirit:library="wishbone" spirit:name="wishbone" spirit:version="b3"/>
+	<spirit:ports>
+		<spirit:port>
+			<spirit:logicalName>ack_i</spirit:logicalName>
+			<spirit:wire>
+				<spirit:onMaster>
+					<spirit:presence>required</spirit:presence>
+					<spirit:direction>in</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>adr_o</spirit:logicalName>
+			<spirit:wire>
+				<spirit:qualifier>
+					<spirit:isAddress>true</spirit:isAddress>
+					<spirit:isData>false</spirit:isData>
+					<spirit:isClock>false</spirit:isClock>
+					<spirit:isReset>false</spirit:isReset>
+				</spirit:qualifier>
+				<spirit:onMaster>
+					<spirit:presence>required</spirit:presence>
+					<spirit:width>32</spirit:width>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>bte_o</spirit:logicalName>
+			<spirit:wire>
+				<spirit:onMaster>
+					<spirit:presence>optional</spirit:presence>
+					<spirit:width>2</spirit:width>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>cti_o</spirit:logicalName>
+			<spirit:wire>
+				<spirit:onMaster>
+					<spirit:presence>optional</spirit:presence>
+					<spirit:width>3</spirit:width>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>cyc_o</spirit:logicalName>
+			<spirit:wire>
+				<spirit:onMaster>
+					<spirit:presence>required</spirit:presence>
+					<spirit:width>1</spirit:width>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>dat_i</spirit:logicalName>
+			<spirit:wire>
+				<spirit:onMaster>
+					<spirit:presence>required</spirit:presence>
+					<spirit:width>32</spirit:width>
+					<spirit:direction>in</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>dat_o</spirit:logicalName>
+			<spirit:wire>
+				<spirit:qualifier>
+					<spirit:isAddress>false</spirit:isAddress>
+					<spirit:isData>true</spirit:isData>
+					<spirit:isClock>false</spirit:isClock>
+					<spirit:isReset>false</spirit:isReset>
+				</spirit:qualifier>
+				<spirit:onMaster>
+					<spirit:presence>required</spirit:presence>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>err_i</spirit:logicalName>
+			<spirit:wire>
+				<spirit:onMaster>
+					<spirit:presence>optional</spirit:presence>
+					<spirit:width>1</spirit:width>
+					<spirit:direction>in</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>rty_i</spirit:logicalName>
+			<spirit:wire>
+				<spirit:onMaster>
+					<spirit:presence>optional</spirit:presence>
+					<spirit:width>1</spirit:width>
+					<spirit:direction>in</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>sel_o</spirit:logicalName>
+			<spirit:wire>
+				<spirit:onMaster>
+					<spirit:presence>required</spirit:presence>
+					<spirit:width>4</spirit:width>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>stb_o</spirit:logicalName>
+			<spirit:wire>
+				<spirit:onMaster>
+					<spirit:presence>required</spirit:presence>
+					<spirit:width>1</spirit:width>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>we_o</spirit:logicalName>
+			<spirit:wire>
+				<spirit:onMaster>
+					<spirit:presence>required</spirit:presence>
+					<spirit:width>1</spirit:width>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+	</spirit:ports>
+</spirit:abstractionDefinition>

@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:design xmlns:kactus2="http://funbase.cs.tut.fi/" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5/index.xsd">
+	<spirit:vendor>org.opencores</spirit:vendor>
+	<spirit:library>soc</spirit:library>
+	<spirit:name>de0_nano.design</spirit:name>
+	<spirit:version>1.0</spirit:version>
+	<spirit:componentInstances>
+		<spirit:componentInstance>
+			<spirit:instanceName>spi_flash_ctrl</spirit:instanceName>
+			<spirit:displayName></spirit:displayName>
+			<spirit:description></spirit:description>
+			<spirit:componentRef spirit:vendor="org.opencores" spirit:library="ip" spirit:name="simple_spi" spirit:version="1.0"/>
+			<spirit:vendorExtensions>
+				<kactus2:position x="770" y="600"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition kactus2:busRef="spi">
+						<kactus2:position x="110" y="40"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wb">
+						<kactus2:position x="-110" y="70"/>
+					</kactus2:portPosition>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="clk_i" x="-110" y="30"/>
+					<kactus2:adHocVisible portName="inta_o" x="-110" y="90"/>
+					<kactus2:adHocVisible portName="rst_i" x="-110" y="50"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:propertyValues/>
+				<kactus2:uuid>{5711041a-54fb-4921-9be4-b4a6c8def692}</kactus2:uuid>
+			</spirit:vendorExtensions>
+		</spirit:componentInstance>
+		<spirit:componentInstance>
+			<spirit:instanceName>gpio_led</spirit:instanceName>
+			<spirit:displayName></spirit:displayName>
+			<spirit:description></spirit:description>
+			<spirit:componentRef spirit:vendor="org.opencores" spirit:library="ip" spirit:name="wb_gpio" spirit:version="1.0"/>
+			<spirit:vendorExtensions>
+				<kactus2:position x="770" y="460"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition kactus2:busRef="wb">
+						<kactus2:position x="-110" y="80"/>
+					</kactus2:portPosition>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="gpio_dir_o" x="110" y="90"/>
+					<kactus2:adHocVisible portName="gpio_i" x="110" y="30"/>
+					<kactus2:adHocVisible portName="gpio_o" x="110" y="60"/>
+					<kactus2:adHocVisible portName="wb_clk" x="-110" y="40"/>
+					<kactus2:adHocVisible portName="wb_rst" x="-110" y="60"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:propertyValues/>
+				<kactus2:uuid>{751214cf-1f35-4784-9592-4a2cc25e243c}</kactus2:uuid>
+			</spirit:vendorExtensions>
+		</spirit:componentInstance>
+		<spirit:componentInstance>
+			<spirit:instanceName>uart</spirit:instanceName>
+			<spirit:displayName></spirit:displayName>
+			<spirit:description></spirit:description>
+			<spirit:componentRef spirit:vendor="org.opencores" spirit:library="ip" spirit:name="uart16550" spirit:version="1.4"/>
+			<spirit:vendorExtensions>
+				<kactus2:position x="770" y="320"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition kactus2:busRef="uart">
+						<kactus2:position x="110" y="40"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wbs">
+						<kactus2:position x="-110" y="70"/>
+					</kactus2:portPosition>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="irq_o" x="-110" y="90"/>
+					<kactus2:adHocVisible portName="wb_clk_i" x="-110" y="30"/>
+					<kactus2:adHocVisible portName="wb_rst_i" x="-110" y="50"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:propertyValues/>
+				<kactus2:uuid>{23015a63-48dd-4587-a28b-3159e8504de5}</kactus2:uuid>
+			</spirit:vendorExtensions>
+		</spirit:componentInstance>
+		<spirit:componentInstance>
+			<spirit:instanceName>bootrom</spirit:instanceName>
+			<spirit:displayName></spirit:displayName>
+			<spirit:description></spirit:description>
+			<spirit:componentRef spirit:vendor="org.opencores" spirit:library="ip" spirit:name="wb_ram" spirit:version="1.0"/>
+			<spirit:vendorExtensions>
+				<kactus2:position x="770" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition kactus2:busRef="wb">
+						<kactus2:position x="-110" y="70"/>
+					</kactus2:portPosition>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="wb_clk_i" x="-110" y="30"/>
+					<kactus2:adHocVisible portName="wb_rst_i" x="-110" y="50"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:propertyValues/>
+				<kactus2:uuid>{d9d68ba5-0ace-4b29-a06f-3c56c3ae19ff}</kactus2:uuid>
+			</spirit:vendorExtensions>
+		</spirit:componentInstance>
+		<spirit:componentInstance>
+			<spirit:instanceName>wb_sdram_ctrl</spirit:instanceName>
+			<spirit:displayName></spirit:displayName>
+			<spirit:description></spirit:description>
+			<spirit:componentRef spirit:vendor="org.opencores" spirit:library="ip" spirit:name="wb_sdram_ctrl" spirit:version="1.0"/>
+			<spirit:vendorExtensions>
+				<kactus2:position x="770" y="180"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition kactus2:busRef="mem">
+						<kactus2:position x="110" y="80"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wb0">
+						<kactus2:position x="-110" y="70"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wb1">
+						<kactus2:position x="-110" y="90"/>
+					</kactus2:portPosition>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="sdram_clk" x="110" y="40"/>
+					<kactus2:adHocVisible portName="sdram_rst" x="110" y="60"/>
+					<kactus2:adHocVisible portName="wb_clk" x="-110" y="30"/>
+					<kactus2:adHocVisible portName="wb_rst" x="-110" y="50"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:propertyValues/>
+				<kactus2:uuid>{e632c22d-f4b0-4e98-a512-42d814901b36}</kactus2:uuid>
+			</spirit:vendorExtensions>
+		</spirit:componentInstance>
+		<spirit:componentInstance>
+			<spirit:instanceName>wb_intercon</spirit:instanceName>
+			<spirit:displayName></spirit:displayName>
+			<spirit:description></spirit:description>
+			<spirit:componentRef spirit:vendor="org.opencores" spirit:library="ip" spirit:name="de0_nano_wb_intercon" spirit:version="1.0"/>
+			<spirit:vendorExtensions>
+				<kactus2:position x="510" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition kactus2:busRef="wbm_gpio0">
+						<kactus2:position x="110" y="480"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wbm_rom0">
+						<kactus2:position x="110" y="70"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wbm_sdram_dbus">
+						<kactus2:position x="110" y="190"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wbm_sdram_ibus">
+						<kactus2:position x="110" y="210"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wbm_spi0">
+						<kactus2:position x="110" y="610"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wbm_uart0">
+						<kactus2:position x="110" y="330"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wbs_dbg">
+						<kactus2:position x="-110" y="130"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wbs_or1k_d">
+						<kactus2:position x="-110" y="270"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wbs_or1k_i">
+						<kactus2:position x="-110" y="290"/>
+					</kactus2:portPosition>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="wb_clk_i" x="-110" y="40"/>
+					<kactus2:adHocVisible portName="wb_rst_i" x="-110" y="60"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:propertyValues/>
+				<kactus2:uuid>{80933d12-83d0-4f3f-8881-aadd6da965c2}</kactus2:uuid>
+			</spirit:vendorExtensions>
+		</spirit:componentInstance>
+		<spirit:componentInstance>
+			<spirit:instanceName>altera_virtual_jtag</spirit:instanceName>
+			<spirit:displayName></spirit:displayName>
+			<spirit:description></spirit:description>
+			<spirit:componentRef spirit:vendor="org.opencores" spirit:library="ip" spirit:name="altera_virtual_jtag" spirit:version="1.0"/>
+			<spirit:vendorExtensions>
+				<kactus2:position x="250" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition kactus2:busRef="debug">
+						<kactus2:position x="-110" y="40"/>
+					</kactus2:portPosition>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities/>
+				<kactus2:propertyValues/>
+				<kactus2:uuid>{caf9acb5-38d7-452b-bd9f-eea8dcccc3d9}</kactus2:uuid>
+			</spirit:vendorExtensions>
+		</spirit:componentInstance>
+		<spirit:componentInstance>
+			<spirit:instanceName>mor1kx</spirit:instanceName>
+			<spirit:displayName></spirit:displayName>
+			<spirit:description></spirit:description>
+			<spirit:componentRef spirit:vendor="org.opencores" spirit:library="ip" spirit:name="mor1kx" spirit:version="3.1"/>
+			<spirit:vendorExtensions>
+				<kactus2:position x="250" y="330"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition kactus2:busRef="dbg">
+						<kactus2:position x="-110" y="40"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wb_d">
+						<kactus2:position x="110" y="40"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wb_i">
+						<kactus2:position x="110" y="60"/>
+					</kactus2:portPosition>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="clk" x="-110" y="60"/>
+					<kactus2:adHocVisible portName="irq_i" x="-110" y="100"/>
+					<kactus2:adHocVisible portName="rst" x="-110" y="80"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:propertyValues/>
+				<kactus2:uuid>{0eb721ab-647d-4f56-8a7b-494c9b9257b6}</kactus2:uuid>
+			</spirit:vendorExtensions>
+		</spirit:componentInstance>
+		<spirit:componentInstance>
+			<spirit:instanceName>clkgen</spirit:instanceName>
+			<spirit:displayName></spirit:displayName>
+			<spirit:description></spirit:description>
+			<spirit:componentRef spirit:vendor="org.opencores" spirit:library="ip" spirit:name="de0_nano_clkgen" spirit:version="1.0"/>
+			<spirit:vendorExtensions>
+				<kactus2:position x="250" y="580"/>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="async_rst_o" x="110" y="40"/>
+					<kactus2:adHocVisible portName="rst_n_pad_i" x="-110" y="60"/>
+					<kactus2:adHocVisible portName="sdram_clk_o" x="110" y="100"/>
+					<kactus2:adHocVisible portName="sdram_rst_o" x="110" y="120"/>
+					<kactus2:adHocVisible portName="sys_clk_pad_i" x="-110" y="30"/>
+					<kactus2:adHocVisible portName="wb_clk_o" x="110" y="60"/>
+					<kactus2:adHocVisible portName="wb_rst_o" x="110" y="80"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:propertyValues/>
+				<kactus2:uuid>{6c53dfe2-dc74-4c3a-b79e-7132cd3f8225}</kactus2:uuid>
+			</spirit:vendorExtensions>
+		</spirit:componentInstance>
+		<spirit:componentInstance>
+			<spirit:instanceName>adv_debug_sys</spirit:instanceName>
+			<spirit:displayName>Debug Unit</spirit:displayName>
+			<spirit:description></spirit:description>
+			<spirit:componentRef spirit:vendor="org.opencores" spirit:library="ip" spirit:name="adv_debug_sys" spirit:version="1.0"/>
+			<spirit:vendorExtensions>
+				<kactus2:position x="250" y="150"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition kactus2:busRef="dbg_cpu0">
+						<kactus2:position x="-110" y="90"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="jsp">
+						<kactus2:position x="110" y="80"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="jtag">
+						<kactus2:position x="-110" y="70"/>
+					</kactus2:portPosition>
+					<kactus2:portPosition kactus2:busRef="wbm">
+						<kactus2:position x="110" y="40"/>
+					</kactus2:portPosition>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="cpu0_clk_i" x="-110" y="130"/>
+					<kactus2:adHocVisible portName="wb_clk_i" x="-110" y="30"/>
+					<kactus2:adHocVisible portName="wb_rst_i" x="-110" y="50"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:propertyValues/>
+				<kactus2:uuid>{676f0b94-c8f0-4645-b927-d55f36c68e9a}</kactus2:uuid>
+			</spirit:vendorExtensions>
+		</spirit:componentInstance>
+		<spirit:componentInstance>
+			<spirit:instanceName>mor1kx_irq</spirit:instanceName>
+			<spirit:displayName></spirit:displayName>
+			<spirit:description></spirit:description>
+			<spirit:componentRef spirit:vendor="org.opencores" spirit:library="ip" spirit:name="mor1kx_irq" spirit:version="1.0"/>
+			<spirit:vendorExtensions>
+				<kactus2:position x="250" y="480"/>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="irq2" x="110" y="30"/>
+					<kactus2:adHocVisible portName="irq6" x="110" y="50"/>
+					<kactus2:adHocVisible portName="irq_o" x="-110" y="40"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:propertyValues/>
+				<kactus2:uuid>{79a2769e-33e7-4745-9d69-2a9d8a74516e}</kactus2:uuid>
+			</spirit:vendorExtensions>
+		</spirit:componentInstance>
+	</spirit:componentInstances>
+	<spirit:interconnections>
+		<spirit:interconnection>
+			<spirit:name>altera_virtual_jtag_debug_to_adv_debug_sys_jtag</spirit:name>
+			<spirit:activeInterface spirit:componentRef="altera_virtual_jtag" spirit:busRef="debug"/>
+			<spirit:activeInterface spirit:componentRef="adv_debug_sys" spirit:busRef="jtag"/>
+		</spirit:interconnection>
+		<spirit:interconnection>
+			<spirit:name>mor1kx_wb_i_to_wb_intercon_wbs_or1k_i</spirit:name>
+			<spirit:activeInterface spirit:componentRef="mor1kx" spirit:busRef="wb_i"/>
+			<spirit:activeInterface spirit:componentRef="wb_intercon" spirit:busRef="wbs_or1k_i"/>
+		</spirit:interconnection>
+		<spirit:interconnection>
+			<spirit:name>mor1kx_wb_d_to_wb_intercon_wbs_or1k_d</spirit:name>
+			<spirit:activeInterface spirit:componentRef="mor1kx" spirit:busRef="wb_d"/>
+			<spirit:activeInterface spirit:componentRef="wb_intercon" spirit:busRef="wbs_or1k_d"/>
+		</spirit:interconnection>
+		<spirit:interconnection>
+			<spirit:name>wb_intercon_wbm_gpio0_to_gpio_led_wb</spirit:name>
+			<spirit:activeInterface spirit:componentRef="wb_intercon" spirit:busRef="wbm_gpio0"/>
+			<spirit:activeInterface spirit:componentRef="gpio_led" spirit:busRef="wb"/>
+		</spirit:interconnection>
+		<spirit:interconnection>
+			<spirit:name>wb_intercon_wbm_sdram_ibus_to_wb_sdram_ctrl_wb1</spirit:name>
+			<spirit:activeInterface spirit:componentRef="wb_intercon" spirit:busRef="wbm_sdram_ibus"/>
+			<spirit:activeInterface spirit:componentRef="wb_sdram_ctrl" spirit:busRef="wb1"/>
+		</spirit:interconnection>
+		<spirit:interconnection>
+			<spirit:name>wb_intercon_wbm_sdram_dbus_to_wb_sdram_ctrl_wb0</spirit:name>
+			<spirit:activeInterface spirit:componentRef="wb_intercon" spirit:busRef="wbm_sdram_dbus"/>
+			<spirit:activeInterface spirit:componentRef="wb_sdram_ctrl" spirit:busRef="wb0"/>
+		</spirit:interconnection>
+		<spirit:interconnection>
+			<spirit:name>wb_intercon_wbm_uart0_to_uart_wbs</spirit:name>
+			<spirit:activeInterface spirit:componentRef="wb_intercon" spirit:busRef="wbm_uart0"/>
+			<spirit:activeInterface spirit:componentRef="uart" spirit:busRef="wbs"/>
+		</spirit:interconnection>
+		<spirit:interconnection>
+			<spirit:name>wb_intercon_wbm_rom0_to_bootrom_wb</spirit:name>
+			<spirit:activeInterface spirit:componentRef="wb_intercon" spirit:busRef="wbm_rom0"/>
+			<spirit:activeInterface spirit:componentRef="bootrom" spirit:busRef="wb"/>
+		</spirit:interconnection>
+		<spirit:interconnection>
+			<spirit:name>adv_debug_sys_dbg_cpu0_to_mor1kx_dbg</spirit:name>
+			<spirit:activeInterface spirit:componentRef="adv_debug_sys" spirit:busRef="dbg_cpu0"/>
+			<spirit:activeInterface spirit:componentRef="mor1kx" spirit:busRef="dbg"/>
+		</spirit:interconnection>
+		<spirit:interconnection>
+			<spirit:name>wb_intercon_wbm_spi0_to_spi_flash_ctrl_wb</spirit:name>
+			<spirit:activeInterface spirit:componentRef="wb_intercon" spirit:busRef="wbm_spi0"/>
+			<spirit:activeInterface spirit:componentRef="spi_flash_ctrl" spirit:busRef="wb"/>
+		</spirit:interconnection>
+		<spirit:interconnection>
+			<spirit:name>adv_debug_sys_wbm_to_wb_intercon_wbs_dbg</spirit:name>
+			<spirit:activeInterface spirit:componentRef="adv_debug_sys" spirit:busRef="wbm"/>
+			<spirit:activeInterface spirit:componentRef="wb_intercon" spirit:busRef="wbs_dbg"/>
+		</spirit:interconnection>
+	</spirit:interconnections>
+	<spirit:hierConnections>
+		<spirit:hierConnection spirit:interfaceRef="spi">
+			<spirit:interface spirit:componentRef="spi_flash_ctrl" spirit:busRef="spi"/>
+			<spirit:vendorExtensions>
+				<kactus2:position x="960" y="640"/>
+				<kactus2:direction x="-1" y="0"/>
+				<kactus2:route kactus2:offPage="false">
+					<kactus2:position x="880" y="640"/>
+					<kactus2:position x="960" y="640"/>
+				</kactus2:route>
+			</spirit:vendorExtensions>
+		</spirit:hierConnection>
+		<spirit:hierConnection spirit:interfaceRef="sdram">
+			<spirit:interface spirit:componentRef="wb_sdram_ctrl" spirit:busRef="mem"/>
+			<spirit:vendorExtensions>
+				<kactus2:position x="960" y="260"/>
+				<kactus2:direction x="-1" y="0"/>
+				<kactus2:route kactus2:offPage="false">
+					<kactus2:position x="880" y="260"/>
+					<kactus2:position x="960" y="260"/>
+				</kactus2:route>
+			</spirit:vendorExtensions>
+		</spirit:hierConnection>
+		<spirit:hierConnection spirit:interfaceRef="uart">
+			<spirit:interface spirit:componentRef="uart" spirit:busRef="uart"/>
+			<spirit:vendorExtensions>
+				<kactus2:position x="960" y="360"/>
+				<kactus2:direction x="-1" y="0"/>
+				<kactus2:route kactus2:offPage="false">
+					<kactus2:position x="880" y="360"/>
+					<kactus2:position x="960" y="360"/>
+				</kactus2:route>
+			</spirit:vendorExtensions>
+		</spirit:hierConnection>
+	</spirit:hierConnections>
+	<spirit:adHocConnections>
+		<spirit:adHocConnection>
+			<spirit:name>mor1kx_irq_irq_o_to_mor1kx_irq_i</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="mor1kx_irq" spirit:portRef="irq_o" spirit:left="31" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="mor1kx" spirit:portRef="irq_i" spirit:left="31" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>simple_spi_0_rst_i_to_clkgen_wb_rst_o</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="spi_flash_ctrl" spirit:portRef="rst_i" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_rst_o" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_wb_clk_o_to_simple_spi_0_clk_i</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_clk_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="spi_flash_ctrl" spirit:portRef="clk_i" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>gpio_led_gpio_dir_o_to_gpio0_dir_o</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="gpio_led" spirit:portRef="gpio_dir_o" spirit:left="7" spirit:right="0"/>
+			<spirit:externalPortReference spirit:portRef="gpio0_dir_o" spirit:left="7" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>gpio_led_gpio_o_to_gpio0_o</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="gpio_led" spirit:portRef="gpio_o" spirit:left="7" spirit:right="0"/>
+			<spirit:externalPortReference spirit:portRef="gpio0_o" spirit:left="7" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_wb_rst_o_to_wb_gpio0_wb_rst</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_rst_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="gpio_led" spirit:portRef="wb_rst" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>gpio_led_gpio_i_to_gpio0_i</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="gpio_led" spirit:portRef="gpio_i" spirit:left="7" spirit:right="0"/>
+			<spirit:externalPortReference spirit:portRef="gpio0_i" spirit:left="7" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_wb_clk_o_to_wb_gpio0_wb_clk</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_clk_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="gpio_led" spirit:portRef="wb_clk" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_wb_rst_o_to_bootrom_wb_rst_i</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_rst_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="bootrom" spirit:portRef="wb_rst_i" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>bootrom_wb_clk_i_to_clkgen_wb_clk_o</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="bootrom" spirit:portRef="wb_clk_i" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_clk_o" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_sys_clk_pad_i_to_sys_clk_pad_i</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="sys_clk_pad_i" spirit:left="0" spirit:right="0"/>
+			<spirit:externalPortReference spirit:portRef="sys_clk_pad_i" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_rst_n_pad_i_to_rst_n_pad_i</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="rst_n_pad_i" spirit:left="0" spirit:right="0"/>
+			<spirit:externalPortReference spirit:portRef="rst_n_pad_i" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_wb_clk_o_to_wb_intercon_wb_clk_i</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_clk_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="wb_intercon" spirit:portRef="wb_clk_i" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_wb_rst_o_to_wb_intercon_wb_rst_i</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_rst_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="wb_intercon" spirit:portRef="wb_rst_i" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_wb_clk_o_to_uart0_wb_clk_i</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_clk_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="uart" spirit:portRef="wb_clk_i" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_wb_rst_o_to_uart0_wb_rst_i</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_rst_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="uart" spirit:portRef="wb_rst_i" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_wb_clk_o_to_wb_sdram_ctrl0_wb_clk</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_clk_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="wb_sdram_ctrl" spirit:portRef="wb_clk" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_wb_rst_o_to_wb_sdram_ctrl0_wb_rst</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_rst_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="wb_sdram_ctrl" spirit:portRef="wb_rst" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_sdram_clk_o_to_wb_sdram_ctrl0_sdram_clk</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="sdram_clk_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="wb_sdram_ctrl" spirit:portRef="sdram_clk" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_sdram_rst_o_to_wb_sdram_ctrl0_sdram_rst</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="sdram_rst_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="wb_sdram_ctrl" spirit:portRef="sdram_rst" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_wb_clk_o_to_mor1kx_clk</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_clk_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="mor1kx" spirit:portRef="clk" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>clkgen_wb_rst_o_to_mor1kx_rst</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_rst_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="mor1kx" spirit:portRef="rst" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>adv_debug_sys_0_wb_clk_i_to_clkgen_wb_clk_o</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="adv_debug_sys" spirit:portRef="wb_clk_i" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_clk_o" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>adv_debug_sys_0_wb_rst_i_to_clkgen_wb_rst_o</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="adv_debug_sys" spirit:portRef="wb_rst_i" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="clkgen" spirit:portRef="wb_rst_o" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>uart_irq_o_to_mor1kx_irq_0_irq2</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="uart" spirit:portRef="irq_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="mor1kx_irq" spirit:portRef="irq2" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+		<spirit:adHocConnection>
+			<spirit:name>simple_spi_0_inta_o_to_mor1kx_irq_0_irq6</spirit:name>
+			<spirit:internalPortReference spirit:componentRef="spi_flash_ctrl" spirit:portRef="inta_o" spirit:left="0" spirit:right="0"/>
+			<spirit:internalPortReference spirit:componentRef="mor1kx_irq" spirit:portRef="irq6" spirit:left="0" spirit:right="0"/>
+		</spirit:adHocConnection>
+	</spirit:adHocConnections>
+	<spirit:vendorExtensions>
+		<kactus2:extensions>
+			<kactus2:columnLayout>
+				<kactus2:column name="System I/O" contentType="0" allowedItems="1" minWidth="119" width="119"/>
+				<kactus2:column name="CPU" contentType="2" allowedItems="2" minWidth="259" width="259"/>
+				<kactus2:column name="intercon" contentType="2" allowedItems="2" minWidth="259" width="259"/>
+				<kactus2:column name="slaves" contentType="2" allowedItems="2" minWidth="259" width="259"/>
+				<kactus2:column name="Peripherals" contentType="0" allowedItems="1" minWidth="119" width="119"/>
+			</kactus2:columnLayout>
+			<kactus2:routes>
+				<kactus2:route kactus2:connRef="altera_virtual_jtag_debug_to_adv_debug_sys_jtag" kactus2:offPage="false">
+					<kactus2:position x="140" y="100"/>
+					<kactus2:position x="120" y="100"/>
+					<kactus2:position x="120" y="220"/>
+					<kactus2:position x="140" y="220"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="mor1kx_wb_i_to_wb_intercon_wbs_or1k_i" kactus2:offPage="false">
+					<kactus2:position x="360" y="390"/>
+					<kactus2:position x="380" y="390"/>
+					<kactus2:position x="380" y="350"/>
+					<kactus2:position x="400" y="350"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="mor1kx_wb_d_to_wb_intercon_wbs_or1k_d" kactus2:offPage="false">
+					<kactus2:position x="360" y="370"/>
+					<kactus2:position x="380" y="370"/>
+					<kactus2:position x="380" y="330"/>
+					<kactus2:position x="400" y="330"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="wb_intercon_wbm_gpio0_to_gpio_led_wb" kactus2:offPage="false">
+					<kactus2:position x="620" y="540"/>
+					<kactus2:position x="660" y="540"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="wb_intercon_wbm_sdram_ibus_to_wb_sdram_ctrl_wb1" kactus2:offPage="false">
+					<kactus2:position x="620" y="270"/>
+					<kactus2:position x="660" y="270"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="wb_intercon_wbm_sdram_dbus_to_wb_sdram_ctrl_wb0" kactus2:offPage="false">
+					<kactus2:position x="620" y="250"/>
+					<kactus2:position x="660" y="250"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="wb_intercon_wbm_uart0_to_uart_wbs" kactus2:offPage="false">
+					<kactus2:position x="620" y="390"/>
+					<kactus2:position x="660" y="390"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="wb_intercon_wbm_rom0_to_bootrom_wb" kactus2:offPage="false">
+					<kactus2:position x="620" y="130"/>
+					<kactus2:position x="660" y="130"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="adv_debug_sys_dbg_cpu0_to_mor1kx_dbg" kactus2:offPage="false">
+					<kactus2:position x="140" y="240"/>
+					<kactus2:position x="120" y="240"/>
+					<kactus2:position x="120" y="370"/>
+					<kactus2:position x="140" y="370"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="wb_intercon_wbm_spi0_to_spi_flash_ctrl_wb" kactus2:offPage="false">
+					<kactus2:position x="620" y="670"/>
+					<kactus2:position x="660" y="670"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="adv_debug_sys_wbm_to_wb_intercon_wbs_dbg" kactus2:offPage="false">
+					<kactus2:position x="360" y="190"/>
+					<kactus2:position x="400" y="190"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="mor1kx_irq_irq_o_to_mor1kx_irq_i" kactus2:offPage="false">
+					<kactus2:position x="140" y="520"/>
+					<kactus2:position x="120" y="520"/>
+					<kactus2:position x="120" y="430"/>
+					<kactus2:position x="140" y="430"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="simple_spi_0_rst_i_to_clkgen_wb_rst_o" kactus2:offPage="true">
+					<kactus2:position x="630" y="650"/>
+					<kactus2:position x="390" y="660"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_wb_clk_o_to_simple_spi_0_clk_i" kactus2:offPage="true">
+					<kactus2:position x="390" y="640"/>
+					<kactus2:position x="630" y="630"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="gpio_led_gpio_dir_o_to_gpio0_dir_o" kactus2:offPage="false">
+					<kactus2:position x="880" y="550"/>
+					<kactus2:position x="960" y="550"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="gpio_led_gpio_o_to_gpio0_o" kactus2:offPage="false">
+					<kactus2:position x="880" y="520"/>
+					<kactus2:position x="960" y="520"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_wb_rst_o_to_wb_gpio0_wb_rst" kactus2:offPage="true">
+					<kactus2:position x="390" y="660"/>
+					<kactus2:position x="630" y="520"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="gpio_led_gpio_i_to_gpio0_i" kactus2:offPage="false">
+					<kactus2:position x="880" y="490"/>
+					<kactus2:position x="960" y="490"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_wb_clk_o_to_wb_gpio0_wb_clk" kactus2:offPage="true">
+					<kactus2:position x="390" y="640"/>
+					<kactus2:position x="630" y="500"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_wb_rst_o_to_bootrom_wb_rst_i" kactus2:offPage="true">
+					<kactus2:position x="390" y="660"/>
+					<kactus2:position x="630" y="110"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="bootrom_wb_clk_i_to_clkgen_wb_clk_o" kactus2:offPage="true">
+					<kactus2:position x="630" y="90"/>
+					<kactus2:position x="390" y="640"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_sys_clk_pad_i_to_sys_clk_pad_i" kactus2:offPage="false">
+					<kactus2:position x="140" y="610"/>
+					<kactus2:position x="90" y="610"/>
+					<kactus2:position x="90" y="560"/>
+					<kactus2:position x="60" y="560"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_rst_n_pad_i_to_rst_n_pad_i" kactus2:offPage="false">
+					<kactus2:position x="140" y="640"/>
+					<kactus2:position x="80" y="640"/>
+					<kactus2:position x="80" y="590"/>
+					<kactus2:position x="60" y="590"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_wb_clk_o_to_wb_intercon_wb_clk_i" kactus2:offPage="true">
+					<kactus2:position x="390" y="640"/>
+					<kactus2:position x="370" y="100"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_wb_rst_o_to_wb_intercon_wb_rst_i" kactus2:offPage="true">
+					<kactus2:position x="390" y="660"/>
+					<kactus2:position x="370" y="120"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_wb_clk_o_to_uart0_wb_clk_i" kactus2:offPage="true">
+					<kactus2:position x="390" y="640"/>
+					<kactus2:position x="630" y="350"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_wb_rst_o_to_uart0_wb_rst_i" kactus2:offPage="true">
+					<kactus2:position x="390" y="660"/>
+					<kactus2:position x="630" y="370"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_wb_clk_o_to_wb_sdram_ctrl0_wb_clk" kactus2:offPage="true">
+					<kactus2:position x="390" y="640"/>
+					<kactus2:position x="630" y="210"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_wb_rst_o_to_wb_sdram_ctrl0_wb_rst" kactus2:offPage="true">
+					<kactus2:position x="390" y="660"/>
+					<kactus2:position x="630" y="230"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_sdram_clk_o_to_wb_sdram_ctrl0_sdram_clk" kactus2:offPage="true">
+					<kactus2:position x="390" y="680"/>
+					<kactus2:position x="910" y="220"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_sdram_rst_o_to_wb_sdram_ctrl0_sdram_rst" kactus2:offPage="true">
+					<kactus2:position x="390" y="700"/>
+					<kactus2:position x="910" y="240"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_wb_clk_o_to_mor1kx_clk" kactus2:offPage="true">
+					<kactus2:position x="390" y="640"/>
+					<kactus2:position x="110" y="390"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="clkgen_wb_rst_o_to_mor1kx_rst" kactus2:offPage="true">
+					<kactus2:position x="390" y="660"/>
+					<kactus2:position x="110" y="410"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="adv_debug_sys_0_wb_clk_i_to_clkgen_wb_clk_o" kactus2:offPage="true">
+					<kactus2:position x="110" y="180"/>
+					<kactus2:position x="390" y="640"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="adv_debug_sys_0_wb_rst_i_to_clkgen_wb_rst_o" kactus2:offPage="true">
+					<kactus2:position x="110" y="200"/>
+					<kactus2:position x="390" y="660"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="uart_irq_o_to_mor1kx_irq_0_irq2" kactus2:offPage="true">
+					<kactus2:position x="630" y="410"/>
+					<kactus2:position x="390" y="510"/>
+				</kactus2:route>
+				<kactus2:route kactus2:connRef="simple_spi_0_inta_o_to_mor1kx_irq_0_irq6" kactus2:offPage="true">
+					<kactus2:position x="630" y="690"/>
+					<kactus2:position x="390" y="530"/>
+				</kactus2:route>
+			</kactus2:routes>
+		</kactus2:extensions>
+		<kactus2:adHocVisibilities>
+			<kactus2:adHocVisible portName="gpio0_dir_o" x="960" y="550"/>
+			<kactus2:adHocVisible portName="gpio0_i" x="960" y="490"/>
+			<kactus2:adHocVisible portName="gpio0_o" x="960" y="520"/>
+			<kactus2:adHocVisible portName="rst_n_pad_i" x="60" y="590"/>
+			<kactus2:adHocVisible portName="sys_clk_pad_i" x="60" y="560"/>
+		</kactus2:adHocVisibilities>
+	</spirit:vendorExtensions>
+</spirit:design>

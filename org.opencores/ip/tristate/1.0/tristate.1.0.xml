@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:kactus2="http://funbase.cs.tut.fi/" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5/index.xsd">
+	<spirit:vendor>org.opencores</spirit:vendor>
+	<spirit:library>ip</spirit:library>
+	<spirit:name>tristate</spirit:name>
+	<spirit:version>1.0</spirit:version>
+	<spirit:model>
+		<spirit:views>
+			<spirit:view>
+				<spirit:name>rtl</spirit:name>
+				<spirit:envIdentifier>::</spirit:envIdentifier>
+			</spirit:view>
+		</spirit:views>
+		<spirit:ports>
+			<spirit:port>
+				<spirit:name>i</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>7</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+				<spirit:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</spirit:vendorExtensions>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left>7</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+				<spirit:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</spirit:vendorExtensions>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>io</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>inout</spirit:direction>
+					<spirit:vector>
+						<spirit:left>7</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+				<spirit:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</spirit:vendorExtensions>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>oe</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left>7</spirit:left>
+						<spirit:right>0</spirit:right>
+					</spirit:vector>
+				</spirit:wire>
+				<spirit:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</spirit:vendorExtensions>
+			</spirit:port>
+		</spirit:ports>
+		<spirit:modelParameters>
+			<spirit:modelParameter spirit:dataType="" spirit:usageType="nontyped">
+				<spirit:name>WIDTH</spirit:name>
+				<spirit:value>8</spirit:value>
+			</spirit:modelParameter>
+		</spirit:modelParameters>
+	</spirit:model>
+	<spirit:vendorExtensions>
+		<kactus2:extensions>
+			<kactus2:kts_attributes>
+				<kactus2:kts_productHier>IP</kactus2:kts_productHier>
+				<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+				<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+			</kactus2:kts_attributes>
+			<kactus2:author>olof</kactus2:author>
+		</kactus2:extensions>
+	</spirit:vendorExtensions>
+</spirit:component>
