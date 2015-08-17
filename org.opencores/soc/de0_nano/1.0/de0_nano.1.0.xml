@@ -6,65 +6,6 @@
 	<spirit:version>1.0</spirit:version>
 	<spirit:busInterfaces>
 		<spirit:busInterface>
-			<spirit:name>spi</spirit:name>
-			<spirit:busType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="spi" spirit:version="1.0"/>
-			<spirit:abstractionType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="spi.absDef" spirit:version="1.0"/>
-			<spirit:master/>
-			<spirit:connectionRequired>false</spirit:connectionRequired>
-			<spirit:portMaps>
-				<spirit:portMap>
-					<spirit:logicalPort>
-						<spirit:name>sck</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:logicalPort>
-					<spirit:physicalPort>
-						<spirit:name>sck_o</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:physicalPort>
-				</spirit:portMap>
-				<spirit:portMap>
-					<spirit:logicalPort>
-						<spirit:name>miso</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:logicalPort>
-					<spirit:physicalPort>
-						<spirit:name>miso_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:physicalPort>
-				</spirit:portMap>
-				<spirit:portMap>
-					<spirit:logicalPort>
-						<spirit:name>mosi</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:logicalPort>
-					<spirit:physicalPort>
-						<spirit:name>mosi_o</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:physicalPort>
-				</spirit:portMap>
-			</spirit:portMaps>
-			<spirit:bitsInLau>8</spirit:bitsInLau>
-			<spirit:endianness>little</spirit:endianness>
-		</spirit:busInterface>
-		<spirit:busInterface>
 			<spirit:name>sdram</spirit:name>
 			<spirit:busType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="sdram16" spirit:version="1.0"/>
 			<spirit:abstractionType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="sdram16.absDef" spirit:version="1.0"/>
@@ -294,6 +235,65 @@
 			<spirit:bitsInLau>8</spirit:bitsInLau>
 			<spirit:endianness>little</spirit:endianness>
 		</spirit:busInterface>
+		<spirit:busInterface>
+			<spirit:name>spi</spirit:name>
+			<spirit:busType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="spi" spirit:version="1.0"/>
+			<spirit:abstractionType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="spi.absDef" spirit:version="1.0"/>
+			<spirit:master/>
+			<spirit:connectionRequired>false</spirit:connectionRequired>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>sck</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>sck_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>miso</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>miso_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>mosi</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>mosi_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+			<spirit:bitsInLau>8</spirit:bitsInLau>
+			<spirit:endianness>little</spirit:endianness>
+		</spirit:busInterface>
 	</spirit:busInterfaces>
 	<spirit:model>
 		<spirit:views>
@@ -301,6 +301,26 @@
 				<spirit:name>structural</spirit:name>
 				<spirit:envIdentifier>::</spirit:envIdentifier>
 				<spirit:hierarchyRef spirit:vendor="org.opencores" spirit:library="soc" spirit:name="de0_nano.designcfg" spirit:version="1.0"/>
+				<spirit:vendorExtensions>
+					<kactus2:componentInstantiation>
+						<spirit:name>structural</spirit:name>
+					</kactus2:componentInstantiation>
+					<kactus2:topLevelViewRef>structural_verilog</kactus2:topLevelViewRef>
+				</spirit:vendorExtensions>
+			</spirit:view>
+			<spirit:view>
+				<spirit:name>structural_verilog</spirit:name>
+				<spirit:envIdentifier>verilog:Kactus2:</spirit:envIdentifier>
+				<spirit:language spirit:strict="false">verilog</spirit:language>
+				<spirit:modelName>de0_nano</spirit:modelName>
+				<spirit:fileSetRef>
+					<spirit:localName>verilogSource</spirit:localName>
+				</spirit:fileSetRef>
+				<spirit:vendorExtensions>
+					<kactus2:componentInstantiation>
+						<spirit:name>structural_verilog</spirit:name>
+					</kactus2:componentInstantiation>
+				</spirit:vendorExtensions>
 			</spirit:view>
 		</spirit:views>
 		<spirit:ports>
@@ -491,14 +511,6 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName spirit:constrained="false">reg</spirit:typeName>
-							<spirit:typeDefinition></spirit:typeDefinition>
-							<spirit:viewNameRef>flat</spirit:viewNameRef>
-							<spirit:viewNameRef>structural</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -509,14 +521,6 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName spirit:constrained="false">wire</spirit:typeName>
-							<spirit:typeDefinition></spirit:typeDefinition>
-							<spirit:viewNameRef>flat</spirit:viewNameRef>
-							<spirit:viewNameRef>structural</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -527,18 +531,28 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
-					<spirit:wireTypeDefs>
-						<spirit:wireTypeDef>
-							<spirit:typeName spirit:constrained="false">wire</spirit:typeName>
-							<spirit:typeDefinition></spirit:typeDefinition>
-							<spirit:viewNameRef>flat</spirit:viewNameRef>
-							<spirit:viewNameRef>structural</spirit:viewNameRef>
-						</spirit:wireTypeDef>
-					</spirit:wireTypeDefs>
 				</spirit:wire>
 			</spirit:port>
 		</spirit:ports>
 	</spirit:model>
+	<spirit:fileSets>
+		<spirit:fileSet>
+			<spirit:name>structural_verilogSource</spirit:name>
+			<spirit:file>
+				<spirit:name>../../../../../or1k/staging/de0_nano_ipxact/rtl/verilog/de0_nano.v</spirit:name>
+				<spirit:fileType>verilogSource</spirit:fileType>
+				<spirit:isIncludeFile spirit:externalDeclarations="false">false</spirit:isIncludeFile>
+			</spirit:file>
+		</spirit:fileSet>
+		<spirit:fileSet>
+			<spirit:name>verilogSource</spirit:name>
+			<spirit:file>
+				<spirit:name>../../../../../or1k/staging/de0_nano_ipxact/rtl/verilog/de0_nano.v</spirit:name>
+				<spirit:fileType>verilogSource</spirit:fileType>
+				<spirit:isIncludeFile spirit:externalDeclarations="false">false</spirit:isIncludeFile>
+			</spirit:file>
+		</spirit:fileSet>
+	</spirit:fileSets>
 	<spirit:vendorExtensions>
 		<kactus2:extensions>
 			<kactus2:kts_attributes>

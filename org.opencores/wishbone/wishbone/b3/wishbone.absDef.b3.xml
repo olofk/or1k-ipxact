@@ -52,7 +52,7 @@
 					<spirit:width>3</spirit:width>
 					<spirit:direction>out</spirit:direction>
 				</spirit:onMaster>
-				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+				<spirit:defaultValue>0</spirit:defaultValue>
 			</spirit:wire>
 		</spirit:port>
 		<spirit:port>
@@ -101,7 +101,7 @@
 					<spirit:width>1</spirit:width>
 					<spirit:direction>in</spirit:direction>
 				</spirit:onMaster>
-				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+				<spirit:defaultValue>0</spirit:defaultValue>
 			</spirit:wire>
 		</spirit:port>
 		<spirit:port>
@@ -112,7 +112,7 @@
 					<spirit:width>1</spirit:width>
 					<spirit:direction>in</spirit:direction>
 				</spirit:onMaster>
-				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+				<spirit:defaultValue>0</spirit:defaultValue>
 			</spirit:wire>
 		</spirit:port>
 		<spirit:port>

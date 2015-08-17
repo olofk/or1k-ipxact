@@ -94,38 +94,6 @@
 				</spirit:portMap>
 				<spirit:portMap>
 					<spirit:logicalPort>
-						<spirit:name>cti_o</spirit:name>
-						<spirit:vector>
-							<spirit:left>2</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:logicalPort>
-					<spirit:physicalPort>
-						<spirit:name>wb_cti_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>2</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:physicalPort>
-				</spirit:portMap>
-				<spirit:portMap>
-					<spirit:logicalPort>
-						<spirit:name>bte_o</spirit:name>
-						<spirit:vector>
-							<spirit:left>1</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:logicalPort>
-					<spirit:physicalPort>
-						<spirit:name>wb_bte_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>1</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:physicalPort>
-				</spirit:portMap>
-				<spirit:portMap>
-					<spirit:logicalPort>
 						<spirit:name>dat_i</spirit:name>
 						<spirit:vector>
 							<spirit:left>7</spirit:left>
@@ -176,7 +144,7 @@
 						</spirit:vector>
 					</spirit:logicalPort>
 					<spirit:physicalPort>
-						<spirit:name>tx</spirit:name>
+						<spirit:name>stx_pad_o</spirit:name>
 						<spirit:vector>
 							<spirit:left>0</spirit:left>
 							<spirit:right>0</spirit:right>
@@ -192,7 +160,50 @@
 						</spirit:vector>
 					</spirit:logicalPort>
 					<spirit:physicalPort>
-						<spirit:name>rx</spirit:name>
+						<spirit:name>srx_pad_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+			<spirit:bitsInLau>8</spirit:bitsInLau>
+			<spirit:endianness>little</spirit:endianness>
+		</spirit:busInterface>
+		<spirit:busInterface>
+			<spirit:name>wb_sys</spirit:name>
+			<spirit:busType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="clk_rst" spirit:version="0"/>
+			<spirit:abstractionType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="clk_rst.absDef" spirit:version="0"/>
+			<spirit:mirroredMaster/>
+			<spirit:connectionRequired>false</spirit:connectionRequired>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>clk</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>wb_clk_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>rst</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>wb_rst_i</spirit:name>
 						<spirit:vector>
 							<spirit:left>0</spirit:left>
 							<spirit:right>0</spirit:right>
@@ -222,18 +233,12 @@
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
 				</spirit:wire>
-				<spirit:vendorExtensions>
-					<kactus2:adHocVisible/>
-				</spirit:vendorExtensions>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>wb_rst_i</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
 				</spirit:wire>
-				<spirit:vendorExtensions>
-					<kactus2:adHocVisible/>
-				</spirit:vendorExtensions>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>wb_adr_i</spirit:name>
@@ -274,26 +279,6 @@
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
-				<spirit:name>wb_cti_i</spirit:name>
-				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
-					<spirit:direction>in</spirit:direction>
-					<spirit:vector>
-						<spirit:left>2</spirit:left>
-						<spirit:right>0</spirit:right>
-					</spirit:vector>
-				</spirit:wire>
-			</spirit:port>
-			<spirit:port>
-				<spirit:name>wb_bte_i</spirit:name>
-				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
-					<spirit:direction>in</spirit:direction>
-					<spirit:vector>
-						<spirit:left>1</spirit:left>
-						<spirit:right>0</spirit:right>
-					</spirit:vector>
-				</spirit:wire>
-			</spirit:port>
-			<spirit:port>
 				<spirit:name>wb_dat_o</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>out</spirit:direction>
@@ -310,7 +295,7 @@
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
-				<spirit:name>tx</spirit:name>
+				<spirit:name>stx_pad_o</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>out</spirit:direction>
 					<spirit:vector>
@@ -320,7 +305,7 @@
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
-				<spirit:name>rx</spirit:name>
+				<spirit:name>srx_pad_i</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
 					<spirit:vector>
@@ -330,7 +315,7 @@
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
-				<spirit:name>irq_o</spirit:name>
+				<spirit:name>int_o</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>out</spirit:direction>
 				</spirit:wire>

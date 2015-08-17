@@ -1784,6 +1784,49 @@
 			<spirit:bitsInLau>8</spirit:bitsInLau>
 			<spirit:endianness>little</spirit:endianness>
 		</spirit:busInterface>
+		<spirit:busInterface>
+			<spirit:name>wb_sys</spirit:name>
+			<spirit:busType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="clk_rst" spirit:version="0"/>
+			<spirit:abstractionType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="clk_rst.absDef" spirit:version="0"/>
+			<spirit:mirroredMaster/>
+			<spirit:connectionRequired>false</spirit:connectionRequired>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>clk</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>wb_clk_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>rst</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>wb_rst_i</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+			<spirit:bitsInLau>8</spirit:bitsInLau>
+			<spirit:endianness>little</spirit:endianness>
+		</spirit:busInterface>
 	</spirit:busInterfaces>
 	<spirit:model>
 		<spirit:views>
@@ -1794,7 +1837,7 @@
 				<spirit:modelName>wb_intercon</spirit:modelName>
 				<spirit:vendorExtensions>
 					<kactus2:componentInstantiation>
-						<spirit:name></spirit:name>
+						<spirit:name>rtl</spirit:name>
 					</kactus2:componentInstantiation>
 				</spirit:vendorExtensions>
 			</spirit:view>
@@ -1809,9 +1852,6 @@
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
 				</spirit:wire>
-				<spirit:vendorExtensions>
-					<kactus2:adHocVisible/>
-				</spirit:vendorExtensions>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>wb_rst_i</spirit:name>
@@ -1822,9 +1862,6 @@
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
 				</spirit:wire>
-				<spirit:vendorExtensions>
-					<kactus2:adHocVisible/>
-				</spirit:vendorExtensions>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>wb_or1k_i_adr_i</spirit:name>

@@ -21,30 +21,45 @@
 				<spirit:name>irq1</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
+					<spirit:driver>
+						<spirit:defaultValue>1'b0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>irq0</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
+					<spirit:driver>
+						<spirit:defaultValue>1'b0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>irq2</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
+					<spirit:driver>
+						<spirit:defaultValue>1'b0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>irq3</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
+					<spirit:driver>
+						<spirit:defaultValue>1'b0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>irq4</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
+					<spirit:driver>
+						<spirit:defaultValue>1'b0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -64,42 +79,63 @@
 				<spirit:name>irq6</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
+					<spirit:driver>
+						<spirit:defaultValue>1'b0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>irq7</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
+					<spirit:driver>
+						<spirit:defaultValue>1'b0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>irq8</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
+					<spirit:driver>
+						<spirit:defaultValue>1'b0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>irq9</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
+					<spirit:driver>
+						<spirit:defaultValue>1'b0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>irq10</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
+					<spirit:driver>
+						<spirit:defaultValue>1'b0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>irq11</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
+					<spirit:driver>
+						<spirit:defaultValue>1'b0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>irq12</spirit:name>
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
+					<spirit:driver>
+						<spirit:defaultValue>1'b0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 		</spirit:ports>

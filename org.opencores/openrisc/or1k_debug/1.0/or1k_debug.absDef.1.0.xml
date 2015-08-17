@@ -28,7 +28,7 @@
 				</spirit:qualifier>
 				<spirit:onMaster>
 					<spirit:presence>required</spirit:presence>
-					<spirit:width>16</spirit:width>
+					<spirit:width>32</spirit:width>
 					<spirit:direction>out</spirit:direction>
 				</spirit:onMaster>
 				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>

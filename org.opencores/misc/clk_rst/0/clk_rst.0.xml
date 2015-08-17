@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:busDefinition xmlns:kactus2="http://funbase.cs.tut.fi/" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5/index.xsd">
+	<spirit:vendor>org.opencores</spirit:vendor>
+	<spirit:library>misc</spirit:library>
+	<spirit:name>clk_rst</spirit:name>
+	<spirit:version>0</spirit:version>
+	<spirit:directConnection>true</spirit:directConnection>
+	<spirit:isAddressable>true</spirit:isAddressable>
+	<spirit:vendorExtensions>
+		<kactus2:version>2,8,49,0</kactus2:version>
+	</spirit:vendorExtensions>
+</spirit:busDefinition>
