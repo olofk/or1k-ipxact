@@ -7,6 +7,23 @@
 	<spirit:busType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="sdram16" spirit:version="1.0"/>
 	<spirit:ports>
 		<spirit:port>
+			<spirit:logicalName>clk</spirit:logicalName>
+			<spirit:wire>
+				<spirit:qualifier>
+					<spirit:isAddress>false</spirit:isAddress>
+					<spirit:isData>false</spirit:isData>
+					<spirit:isClock>true</spirit:isClock>
+					<spirit:isReset>false</spirit:isReset>
+				</spirit:qualifier>
+				<spirit:onMaster>
+					<spirit:presence>required</spirit:presence>
+					<spirit:width>1</spirit:width>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onMaster>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
 			<spirit:logicalName>address</spirit:logicalName>
 			<spirit:wire>
 				<spirit:qualifier>
