@@ -578,38 +578,6 @@
 						</spirit:vector>
 					</spirit:physicalPort>
 				</spirit:portMap>
-				<spirit:portMap>
-					<spirit:logicalPort>
-						<spirit:name>err_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:logicalPort>
-					<spirit:physicalPort>
-						<spirit:name>wb_sdram_dbus_err_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:physicalPort>
-				</spirit:portMap>
-				<spirit:portMap>
-					<spirit:logicalPort>
-						<spirit:name>rty_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:logicalPort>
-					<spirit:physicalPort>
-						<spirit:name>wb_sdram_dbus_rty_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:physicalPort>
-				</spirit:portMap>
 			</spirit:portMaps>
 			<spirit:bitsInLau>8</spirit:bitsInLau>
 			<spirit:endianness>little</spirit:endianness>
@@ -775,38 +743,6 @@
 					</spirit:logicalPort>
 					<spirit:physicalPort>
 						<spirit:name>wb_sdram_ibus_ack_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:physicalPort>
-				</spirit:portMap>
-				<spirit:portMap>
-					<spirit:logicalPort>
-						<spirit:name>err_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:logicalPort>
-					<spirit:physicalPort>
-						<spirit:name>wb_sdram_ibus_err_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:physicalPort>
-				</spirit:portMap>
-				<spirit:portMap>
-					<spirit:logicalPort>
-						<spirit:name>rty_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:logicalPort>
-					<spirit:physicalPort>
-						<spirit:name>wb_sdram_ibus_rty_i</spirit:name>
 						<spirit:vector>
 							<spirit:left>0</spirit:left>
 							<spirit:right>0</spirit:right>
@@ -1000,22 +936,6 @@
 						</spirit:vector>
 					</spirit:physicalPort>
 				</spirit:portMap>
-				<spirit:portMap>
-					<spirit:logicalPort>
-						<spirit:name>rty_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:logicalPort>
-					<spirit:physicalPort>
-						<spirit:name>wb_rom0_rty_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:physicalPort>
-				</spirit:portMap>
 			</spirit:portMaps>
 			<spirit:bitsInLau>8</spirit:bitsInLau>
 			<spirit:endianness>little</spirit:endianness>
@@ -1165,38 +1085,6 @@
 					</spirit:logicalPort>
 					<spirit:physicalPort>
 						<spirit:name>wb_uart0_ack_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:physicalPort>
-				</spirit:portMap>
-				<spirit:portMap>
-					<spirit:logicalPort>
-						<spirit:name>err_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:logicalPort>
-					<spirit:physicalPort>
-						<spirit:name>wb_uart0_err_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:physicalPort>
-				</spirit:portMap>
-				<spirit:portMap>
-					<spirit:logicalPort>
-						<spirit:name>rty_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:logicalPort>
-					<spirit:physicalPort>
-						<spirit:name>wb_uart0_rty_i</spirit:name>
 						<spirit:vector>
 							<spirit:left>0</spirit:left>
 							<spirit:right>0</spirit:right>
@@ -1539,38 +1427,6 @@
 					</spirit:logicalPort>
 					<spirit:physicalPort>
 						<spirit:name>wb_spi0_ack_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:physicalPort>
-				</spirit:portMap>
-				<spirit:portMap>
-					<spirit:logicalPort>
-						<spirit:name>err_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:logicalPort>
-					<spirit:physicalPort>
-						<spirit:name>wb_spi0_err_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:physicalPort>
-				</spirit:portMap>
-				<spirit:portMap>
-					<spirit:logicalPort>
-						<spirit:name>rty_i</spirit:name>
-						<spirit:vector>
-							<spirit:left>0</spirit:left>
-							<spirit:right>0</spirit:right>
-						</spirit:vector>
-					</spirit:logicalPort>
-					<spirit:physicalPort>
-						<spirit:name>wb_spi0_rty_i</spirit:name>
 						<spirit:vector>
 							<spirit:left>0</spirit:left>
 							<spirit:right>0</spirit:right>
@@ -1971,6 +1827,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -1981,6 +1840,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2091,6 +1953,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2101,6 +1966,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2211,6 +2079,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2221,6 +2092,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2331,6 +2205,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2341,6 +2218,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2441,6 +2321,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2451,6 +2334,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2551,6 +2437,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2561,6 +2450,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2671,6 +2563,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2681,6 +2576,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2781,6 +2679,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2791,6 +2692,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2891,6 +2795,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -2901,6 +2808,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -3011,6 +2921,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
@@ -3021,6 +2934,9 @@
 						<spirit:left>0</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
 				</spirit:wire>
 			</spirit:port>
 		</spirit:ports>
