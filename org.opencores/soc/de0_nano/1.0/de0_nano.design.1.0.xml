@@ -442,9 +442,7 @@
 				<kactus2:position x="960" y="230"/>
 				<kactus2:direction x="-1" y="0"/>
 				<kactus2:route kactus2:offPage="false">
-					<kactus2:position x="880" y="250"/>
-					<kactus2:position x="940" y="250"/>
-					<kactus2:position x="940" y="230"/>
+					<kactus2:position x="880" y="230"/>
 					<kactus2:position x="960" y="230"/>
 				</kactus2:route>
 			</spirit:vendorExtensions>

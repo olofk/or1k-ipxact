@@ -188,6 +188,22 @@
 						</spirit:vector>
 					</spirit:physicalPort>
 				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>clk</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>clk_pad_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
 			</spirit:portMaps>
 			<spirit:bitsInLau>8</spirit:bitsInLau>
 			<spirit:endianness>little</spirit:endianness>
@@ -345,6 +361,12 @@
 				<spirit:vendorExtensions>
 					<kactus2:adHocVisible/>
 				</spirit:vendorExtensions>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>clk_pad_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
+				</spirit:wire>
 			</spirit:port>
 			<spirit:port>
 				<spirit:name>ras_pad_o</spirit:name>
