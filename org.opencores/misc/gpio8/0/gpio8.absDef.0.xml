@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:abstractionDefinition xmlns:kactus2="http://funbase.cs.tut.fi/" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5/index.xsd">
+	<spirit:vendor>org.opencores</spirit:vendor>
+	<spirit:library>misc</spirit:library>
+	<spirit:name>gpio8.absDef</spirit:name>
+	<spirit:version>0</spirit:version>
+	<spirit:busType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="gpio8" spirit:version="0"/>
+	<spirit:ports>
+		<spirit:port>
+			<spirit:logicalName>io</spirit:logicalName>
+			<spirit:wire>
+				<spirit:onMaster>
+					<spirit:presence>required</spirit:presence>
+					<spirit:width>8</spirit:width>
+					<spirit:direction>inout</spirit:direction>
+				</spirit:onMaster>
+				<spirit:onSlave>
+					<spirit:presence>required</spirit:presence>
+					<spirit:width>8</spirit:width>
+					<spirit:direction>inout</spirit:direction>
+				</spirit:onSlave>
+				<spirit:onSystem>
+					<spirit:presence>required</spirit:presence>
+					<spirit:width>8</spirit:width>
+					<spirit:direction>inout</spirit:direction>
+				</spirit:onSystem>
+				<spirit:requiresDriver spirit:driverType="any">false</spirit:requiresDriver>
+			</spirit:wire>
+		</spirit:port>
+	</spirit:ports>
+	<spirit:vendorExtensions>
+		<kactus2:version>2,8,49,0</kactus2:version>
+	</spirit:vendorExtensions>
+</spirit:abstractionDefinition>
