@@ -245,7 +245,7 @@
 				<spirit:modelName>wb_ram</spirit:modelName>
 				<spirit:vendorExtensions>
 					<kactus2:componentInstantiation>
-						<spirit:name></spirit:name>
+						<spirit:name>rtl</spirit:name>
 					</kactus2:componentInstantiation>
 				</spirit:vendorExtensions>
 			</spirit:view>
@@ -418,7 +418,7 @@
 			<spirit:name>memfile</spirit:name>
 			<spirit:displayName>Memory file</spirit:displayName>
 			<spirit:description>This is a readmemh thingie</spirit:description>
-			<spirit:value spirit:id="{59124b8f-f058-4198-8ef1-d6a3d0513bc1}">&quot;&quot;</spirit:value>
+			<spirit:value spirit:id="{59124b8f-f058-4198-8ef1-d6a3d0513bc1}" spirit:resolve="user">&quot;&quot;</spirit:value>
 		</spirit:parameter>
 	</spirit:parameters>
 	<spirit:vendorExtensions>
@@ -428,9 +428,6 @@
 				<kactus2:kts_implementation>HW</kactus2:kts_implementation>
 				<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
 			</kactus2:kts_attributes>
-			<kactus2:sourceDirectories>
-				<kactus2:sourceDirectory>../../../../../../.local/share/orpsoc-cores/cores/wb_ram/rtl/verilog</kactus2:sourceDirectory>
-			</kactus2:sourceDirectories>
 			<kactus2:author>olof</kactus2:author>
 		</kactus2:extensions>
 	</spirit:vendorExtensions>
