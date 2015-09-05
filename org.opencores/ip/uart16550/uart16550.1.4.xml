@@ -16,14 +16,14 @@
 					<spirit:logicalPort>
 						<spirit:name>adr_o</spirit:name>
 						<spirit:vector>
-							<spirit:left>31</spirit:left>
+							<spirit:left>2</spirit:left>
 							<spirit:right>0</spirit:right>
 						</spirit:vector>
 					</spirit:logicalPort>
 					<spirit:physicalPort>
 						<spirit:name>wb_adr_i</spirit:name>
 						<spirit:vector>
-							<spirit:left>31</spirit:left>
+							<spirit:left>2</spirit:left>
 							<spirit:right>0</spirit:right>
 						</spirit:vector>
 					</spirit:physicalPort>
@@ -245,7 +245,7 @@
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
 					<spirit:vector>
-						<spirit:left>31</spirit:left>
+						<spirit:left>2</spirit:left>
 						<spirit:right>0</spirit:right>
 					</spirit:vector>
 				</spirit:wire>
