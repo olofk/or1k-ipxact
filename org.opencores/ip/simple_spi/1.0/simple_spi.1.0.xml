@@ -16,14 +16,14 @@
 					<spirit:logicalPort>
 						<spirit:name>adr_o</spirit:name>
 						<spirit:vector>
-							<spirit:left>1</spirit:left>
+							<spirit:left>2</spirit:left>
 							<spirit:right>0</spirit:right>
 						</spirit:vector>
 					</spirit:logicalPort>
 					<spirit:physicalPort>
 						<spirit:name>adr_i</spirit:name>
 						<spirit:vector>
-							<spirit:left>1</spirit:left>
+							<spirit:left>2</spirit:left>
 							<spirit:right>0</spirit:right>
 						</spirit:vector>
 					</spirit:physicalPort>
@@ -183,6 +183,22 @@
 						</spirit:vector>
 					</spirit:physicalPort>
 				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>cs</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>ss_o</spirit:name>
+						<spirit:vector>
+							<spirit:left>0</spirit:left>
+							<spirit:right>0</spirit:right>
+						</spirit:vector>
+					</spirit:physicalPort>
+				</spirit:portMap>
 			</spirit:portMaps>
 			<spirit:bitsInLau>8</spirit:bitsInLau>
 			<spirit:endianness>little</spirit:endianness>
@@ -324,7 +340,7 @@
 				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
 					<spirit:direction>in</spirit:direction>
 					<spirit:vector>
-						<spirit:left expression="1">1</spirit:left>
+						<spirit:left>2</spirit:left>
 						<spirit:right expression="0">0</spirit:right>
 					</spirit:vector>
 					<spirit:wireTypeDefs>
@@ -481,6 +497,12 @@
 							<spirit:viewNameRef>flat</spirit:viewNameRef>
 						</spirit:wireTypeDef>
 					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>ss_o</spirit:name>
+				<spirit:wire spirit:allLogicalDirectionsAllowed="false">
+					<spirit:direction>out</spirit:direction>
 				</spirit:wire>
 			</spirit:port>
 		</spirit:ports>
