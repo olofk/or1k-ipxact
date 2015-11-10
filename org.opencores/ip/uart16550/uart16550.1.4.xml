@@ -9,7 +9,7 @@
 			<spirit:name>wbs</spirit:name>
 			<spirit:busType spirit:vendor="org.opencores" spirit:library="wishbone" spirit:name="wishbone8" spirit:version="b3"/>
 			<spirit:abstractionType spirit:vendor="org.opencores" spirit:library="wishbone" spirit:name="wishbone8.absDef" spirit:version="b3"/>
-			<spirit:mirroredMaster/>
+			<spirit:slave/>
 			<spirit:connectionRequired>false</spirit:connectionRequired>
 			<spirit:portMaps>
 				<spirit:portMap>
