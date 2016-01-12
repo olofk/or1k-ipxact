@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spirit:component xmlns:kactus2="http://funbase.cs.tut.fi/" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.5/index.xsd">
-	<spirit:vendor>org.opencores</spirit:vendor>
+	<spirit:vendor>librecores.org</spirit:vendor>
 	<spirit:library>ip</spirit:library>
 	<spirit:name>simple_spi</spirit:name>
 	<spirit:version>1.0</spirit:version>
 	<spirit:busInterfaces>
 		<spirit:busInterface>
 			<spirit:name>wb</spirit:name>
-			<spirit:busType spirit:vendor="org.opencores" spirit:library="wishbone" spirit:name="wishbone8" spirit:version="b3"/>
-			<spirit:abstractionType spirit:vendor="org.opencores" spirit:library="wishbone" spirit:name="wishbone8.absDef" spirit:version="b3"/>
+			<spirit:busType spirit:vendor="librecores.org" spirit:library="wishbone" spirit:name="wishbone8" spirit:version="b3"/>
+			<spirit:abstractionType spirit:vendor="librecores.org" spirit:library="wishbone" spirit:name="wishbone8.absDef" spirit:version="b3"/>
 			<spirit:mirroredMaster/>
 			<spirit:connectionRequired>false</spirit:connectionRequired>
 			<spirit:portMaps>
@@ -130,8 +130,8 @@
 		</spirit:busInterface>
 		<spirit:busInterface>
 			<spirit:name>spi</spirit:name>
-			<spirit:busType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="spi" spirit:version="1.0"/>
-			<spirit:abstractionType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="spi.absDef" spirit:version="1.0"/>
+			<spirit:busType spirit:vendor="librecores.org" spirit:library="misc" spirit:name="spi" spirit:version="1.0"/>
+			<spirit:abstractionType spirit:vendor="librecores.org" spirit:library="misc" spirit:name="spi.absDef" spirit:version="1.0"/>
 			<spirit:master/>
 			<spirit:connectionRequired>false</spirit:connectionRequired>
 			<spirit:portMaps>
@@ -205,8 +205,8 @@
 		</spirit:busInterface>
 		<spirit:busInterface>
 			<spirit:name>wb_sys</spirit:name>
-			<spirit:busType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="clk_rst" spirit:version="0"/>
-			<spirit:abstractionType spirit:vendor="org.opencores" spirit:library="misc" spirit:name="clk_rst.absDef" spirit:version="0"/>
+			<spirit:busType spirit:vendor="librecores.org" spirit:library="misc" spirit:name="clk_rst" spirit:version="0"/>
+			<spirit:abstractionType spirit:vendor="librecores.org" spirit:library="misc" spirit:name="clk_rst.absDef" spirit:version="0"/>
 			<spirit:mirroredMaster/>
 			<spirit:connectionRequired>false</spirit:connectionRequired>
 			<spirit:portMaps>
